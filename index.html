@@ -2,19 +2,26 @@
 <html lang="it">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Workout Registry</title><link rel="stylesheet" href="styles.css">
+<title>Workout & Nutrition Registry</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><div><small>TRAINING LOG</small><h1>Workout Registry</h1><p>Registro completo • massa magra • home 3× settimana</p></div>
-<button id="exportBtn">Esporta JSON</button></header>
+<header><div><small>TRAINING + NUTRITION LOG</small><h1>Workout Registry</h1><p>Allenamenti, alimentazione e progressi in un unico registro</p></div>
+<button id="exportBtn">Esporta dati</button></header>
 <main>
 <section id="stats" class="stats"></section>
+<section class="card nutrition-card">
+  <div class="head"><div><small>NUTRIZIONE</small><h2>Oggi</h2></div><div id="nutritionDate" class="muted"></div></div>
+  <div id="nutritionTotals" class="macro-grid"></div>
+  <div id="nutritionMeals"></div>
+  <p class="muted">Le stime da foto o descrizioni vaghe sono approssimative; diventano più precise con peso, quantità o etichetta nutrizionale.</p>
+</section>
 <section class="card"><div class="head"><div><small>PROGRESSI</small><h2>Trend esercizio</h2></div><select id="exerciseSelect"></select></div><canvas id="chart" height="220"></canvas></section>
 <section class="grid">
 <div class="card"><small>ULTIMA SEDUTA</small><h2 id="latestTitle"></h2><div id="latest"></div></div>
 <div class="card"><small>PROGRAMMA</small><h2>Home 3× settimana</h2><div id="program"></div></div>
 </section>
 <section class="card"><div class="head"><div><small>ARCHIVIO</small><h2>Tutte le sedute</h2></div><input id="search" placeholder="Cerca esercizio…"></div><div id="sessions"></div></section>
+<section class="card"><div class="head"><div><small>DIARIO ALIMENTARE</small><h2>Storico nutrizione</h2></div></div><div id="nutritionHistory"></div></section>
 </main>
-<footer>I dati canonici sono in <code>data/workouts.json</code></footer>
+<footer>Dati allenamento: <code>data/workouts.json</code> • nutrizione: <code>data/nutrition.json</code></footer>
 <script src="app.js"></script></body></html>
