@@ -11,5 +11,22 @@
     "carbs": null,
     "fat": null
   },
-  "days": []
+  "days": [
+    {
+      "date": "2026-09-13",
+      "meals": [
+        {
+          "type": "Cena",
+          "description": "Riso basmati con piselli (circa 80 g di riso) + 1 scatoletta di tonno",
+          "estimated": true,
+          "assumptions": "Riso 80 g considerato peso a crudo; piselli stimati 70 g; tonno stimato 80 g sgocciolato al naturale; condimenti non inclusi perché non indicati.",
+          "energy": 450,
+          "protein": 29,
+          "carbs": 70,
+          "fat": 4
+        }
+      ],
+      "totals": {"energy":450,"protein":29,"carbs":70,"fat":4}
+    }
+  ]
 }
