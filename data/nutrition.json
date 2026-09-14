@@ -6,10 +6,12 @@
     "units": {"energy":"kcal","protein":"g","carbs":"g","fat":"g"}
   },
   "targets": {
-    "energy": null,
-    "protein": null,
-    "carbs": null,
-    "fat": null
+    "goal": "Aumento massa magra con surplus moderato",
+    "energy": 2400,
+    "protein": 130,
+    "carbs": 300,
+    "fat": 75,
+    "note": "Target iniziali da aggiustare in base al trend del peso e alle prestazioni; priorità a proteine e calorie medie settimanali."
   },
   "days": [
     {
