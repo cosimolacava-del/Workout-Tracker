@@ -5,11 +5,12 @@
 <title>Fitness Registry</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="topbar"><div><small>FITNESS REGISTRY</small><h1>Workout & Nutrition</h1><p>Allenamento, alimentazione, calorie e peso in un unico posto</p></div><button id="exportBtn">Esporta dati</button></header>
+<header class="topbar"><div><small>FITNESS REGISTRY</small><h1>Workout & Nutrition</h1><p>Allenamento, alimentazione, corsa, calorie e peso in un unico posto</p></div><button id="exportBtn">Esporta dati</button></header>
 <nav class="tabs" aria-label="Sezioni">
   <button class="tab active" data-tab="dashboard">Dashboard</button>
   <button class="tab" data-tab="nutrition">Alimentazione</button>
   <button class="tab" data-tab="training">Allenamenti</button>
+  <button class="tab" data-tab="cardio">Corsa/Cardio</button>
   <button class="tab" data-tab="weight">Peso</button>
 </nav>
 <main>
@@ -38,11 +39,17 @@
   <section class="card"><div class="head"><div><small>ARCHIVIO</small><h2>Tutte le sedute</h2></div><input id="search" placeholder="Cerca esercizio…"></div><div id="sessions"></div></section>
 </section>
 
+<section class="panel" id="tab-cardio">
+  <section class="grid"><div class="card"><small>ULTIMA ATTIVITÀ</small><h2 id="cardioHeadline">Nessuna attività</h2><div id="cardioLatest"></div></div><div class="card"><small>MAPMYRUN</small><h2 id="cardioSyncStatus">Sync predisposta</h2><p class="muted">Le attività MapMyRun vengono importate in automatico quando l'accesso API è configurato.</p></div></section>
+  <section class="grid"><div class="card"><small>DISTANZA</small><h2>Trend corsa</h2><canvas id="cardioDistanceChart" height="260"></canvas></div><div class="card"><small>PASSO</small><h2>Passo medio</h2><canvas id="cardioPaceChart" height="260"></canvas></div></section>
+  <section class="card"><small>ARCHIVIO</small><h2>Attività cardio</h2><div id="cardioHistory"></div></section>
+</section>
+
 <section class="panel" id="tab-weight">
   <section class="grid"><div class="card"><small>PESO CORPOREO</small><h2 id="weightHeadline">Nessuna misura</h2><p class="muted">Una misurazione a settimana è sufficiente. Scrivimi il peso in chat e lo registro qui.</p></div><div class="card"><small>TREND OBIETTIVO</small><h2>+0,1–0,2 kg/settimana</h2><p class="muted">Ritmo iniziale orientativo per aumentare massa con surplus moderato. Lo correggiamo in base alla risposta reale.</p></div></section>
   <section class="card"><small>ANDAMENTO</small><h2>Peso nel tempo</h2><canvas id="weightChartFull" height="280"></canvas></section>
   <section class="card"><small>REGISTRO</small><h2>Misurazioni</h2><div id="weightHistory"></div></section>
 </section>
 </main>
-<footer>Dati: <code>data/workouts.json</code> • <code>data/nutrition.json</code> • <code>data/bodyweight.json</code></footer>
+<footer>Dati: <code>data/workouts.json</code> • <code>data/nutrition.json</code> • <code>data/cardio.json</code> • <code>data/bodyweight.json</code></footer>
 <script src="app.js"></script></body></html>
