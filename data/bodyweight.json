@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Bodyweight Log",
+    "updated": "2026-09-14",
+    "unit": "kg"
+  },
+  "goal": {
+    "type": "lean_gain",
+    "weekly_change_min_kg": 0.1,
+    "weekly_change_max_kg": 0.2,
+    "note": "Trend orientativo: crescita lenta e regolare; il target calorico va corretto se il peso resta fermo o sale troppo rapidamente per più settimane."
+  },
+  "entries": []
+}
