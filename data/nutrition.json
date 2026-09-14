@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Nutrition Log",
-    "updated": "2026-09-13",
+    "updated": "2026-09-14",
     "estimation_method": "Stime da descrizione e/o foto; valori approssimativi salvo quantità/pesi o etichette nutrizionali forniti dall'utente.",
     "units": {"energy":"kcal","protein":"g","carbs":"g","fat":"g"}
   },
@@ -12,6 +12,32 @@
     "fat": null
   },
   "days": [
+    {
+      "date": "2026-09-14",
+      "meals": [
+        {
+          "type": "Colazione",
+          "description": "Yogurt greco 0% con frutta + 1 muffin fatto in casa (1/12 della ricetta)",
+          "estimated": true,
+          "assumptions": "In assenza di pesi: yogurt greco 0% stimato 170 g e frutta 150 g. Muffin stimato come porzione media di muffin casalingo della ricetta preparata in 12 pezzi; ricetta esatta non recuperata con sufficiente affidabilità, quindi macro del muffin provvisori.",
+          "energy": 340,
+          "protein": 21,
+          "carbs": 51,
+          "fat": 6
+        },
+        {
+          "type": "Pranzo",
+          "description": "250 g pollo con curry thai + 100 g riso basmati",
+          "estimated": true,
+          "assumptions": "Pollo considerato 250 g di petto peso a crudo; riso 100 g considerato peso a crudo. Curry thai stimato con circa 100 ml di latte di cocco/salsa; quantità di salsa non specificata.",
+          "energy": 875,
+          "protein": 67,
+          "carbs": 89,
+          "fat": 25
+        }
+      ],
+      "totals": {"energy":1215,"protein":88,"carbs":140,"fat":31}
+    },
     {
       "date": "2026-09-13",
       "meals": [
