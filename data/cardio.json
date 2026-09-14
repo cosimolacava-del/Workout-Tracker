@@ -1,0 +1,17 @@
+{
+  "meta": {"title":"Cardio Log","updated":"2026-09-14","units":{"distance":"km","duration":"seconds","pace":"min/km","speed":"km/h","energy":"kcal"}},
+  "activities": [
+    {
+      "id":"2026-09-14-run-1",
+      "date":"2026-09-14",
+      "type":"Corsa",
+      "distance_km":3.04,
+      "duration_seconds":1214,
+      "pace":"6:38",
+      "speed_kmh":9.02,
+      "energy_kcal":197,
+      "source":"Apple workout screenshot",
+      "note":"Corsa serale"
+    }
+  ]
+}
