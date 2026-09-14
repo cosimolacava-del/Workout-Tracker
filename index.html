@@ -2,26 +2,47 @@
 <html lang="it">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Workout & Nutrition Registry</title><link rel="stylesheet" href="styles.css">
+<title>Fitness Registry</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><div><small>TRAINING + NUTRITION LOG</small><h1>Workout Registry</h1><p>Allenamenti, alimentazione e progressi in un unico registro</p></div>
-<button id="exportBtn">Esporta dati</button></header>
+<header class="topbar"><div><small>FITNESS REGISTRY</small><h1>Workout & Nutrition</h1><p>Allenamento, alimentazione, calorie e peso in un unico posto</p></div><button id="exportBtn">Esporta dati</button></header>
+<nav class="tabs" aria-label="Sezioni">
+  <button class="tab active" data-tab="dashboard">Dashboard</button>
+  <button class="tab" data-tab="nutrition">Alimentazione</button>
+  <button class="tab" data-tab="training">Allenamenti</button>
+  <button class="tab" data-tab="weight">Peso</button>
+</nav>
 <main>
-<section id="stats" class="stats"></section>
-<section class="card nutrition-card">
-  <div class="head"><div><small>NUTRIZIONE</small><h2>Oggi</h2></div><div id="nutritionDate" class="muted"></div></div>
-  <div id="nutritionTotals" class="macro-grid"></div>
-  <div id="nutritionMeals"></div>
-  <p class="muted">Le stime da foto o descrizioni vaghe sono approssimative; diventano più precise con peso, quantità o etichetta nutrizionale.</p>
+<section class="panel active" id="tab-dashboard">
+  <section id="stats" class="stats"></section>
+  <section class="grid">
+    <div class="card"><div class="head"><div><small>OGGI</small><h2>Calorie e macro</h2></div><div id="dashDate" class="muted"></div></div><div id="dashMacros" class="macro-grid"></div><div id="dashTargetNote" class="muted"></div></div>
+    <div class="card"><small>ULTIMA SEDUTA</small><h2 id="latestTitle"></h2><div id="latest"></div></div>
+  </section>
+  <section class="grid">
+    <div class="card"><div class="head"><div><small>CALORIE</small><h2>Andamento giornaliero</h2></div></div><canvas id="kcalChart" height="240"></canvas></div>
+    <div class="card"><div class="head"><div><small>PESO</small><h2>Trend settimanale</h2></div><div id="currentWeight" class="pill">—</div></div><canvas id="weightChart" height="240"></canvas></div>
+  </section>
 </section>
-<section class="card"><div class="head"><div><small>PROGRESSI</small><h2>Trend esercizio</h2></div><select id="exerciseSelect"></select></div><canvas id="chart" height="220"></canvas></section>
-<section class="grid">
-<div class="card"><small>ULTIMA SEDUTA</small><h2 id="latestTitle"></h2><div id="latest"></div></div>
-<div class="card"><small>PROGRAMMA</small><h2>Home 3× settimana</h2><div id="program"></div></div>
+
+<section class="panel" id="tab-nutrition">
+  <section class="card"><div class="head"><div><small>TARGET</small><h2>Obiettivi quotidiani</h2></div></div><div id="nutritionTargets" class="target-grid"></div><p id="targetExplanation" class="muted"></p></section>
+  <section class="card nutrition-card"><div class="head"><div><small>NUTRIZIONE</small><h2>Oggi</h2></div><div id="nutritionDate" class="muted"></div></div><div id="nutritionTotals" class="macro-grid"></div><div id="nutritionProgress"></div><div id="nutritionMeals"></div><p class="muted">Le stime da foto o descrizioni vaghe sono approssimative; diventano più precise con peso, quantità o etichetta nutrizionale.</p></section>
+  <section class="card"><small>CALORIE</small><h2>Grafico giornaliero</h2><canvas id="kcalChartNutrition" height="260"></canvas></section>
+  <section class="card"><small>DIARIO</small><h2>Storico nutrizione</h2><div id="nutritionHistory"></div></section>
 </section>
-<section class="card"><div class="head"><div><small>ARCHIVIO</small><h2>Tutte le sedute</h2></div><input id="search" placeholder="Cerca esercizio…"></div><div id="sessions"></div></section>
-<section class="card"><div class="head"><div><small>DIARIO ALIMENTARE</small><h2>Storico nutrizione</h2></div></div><div id="nutritionHistory"></div></section>
+
+<section class="panel" id="tab-training">
+  <section class="card"><div class="head"><div><small>PROGRESSI</small><h2>Trend esercizio</h2></div><select id="exerciseSelect"></select></div><canvas id="exerciseChart" height="240"></canvas></section>
+  <section class="grid"><div class="card"><small>ULTIMA SEDUTA</small><h2 id="latestTitleTraining"></h2><div id="latestTraining"></div></div><div class="card"><small>PROGRAMMA</small><h2>Home 3× settimana</h2><div id="program"></div></div></section>
+  <section class="card"><div class="head"><div><small>ARCHIVIO</small><h2>Tutte le sedute</h2></div><input id="search" placeholder="Cerca esercizio…"></div><div id="sessions"></div></section>
+</section>
+
+<section class="panel" id="tab-weight">
+  <section class="grid"><div class="card"><small>PESO CORPOREO</small><h2 id="weightHeadline">Nessuna misura</h2><p class="muted">Una misurazione a settimana è sufficiente. Scrivimi il peso in chat e lo registro qui.</p></div><div class="card"><small>TREND OBIETTIVO</small><h2>+0,1–0,2 kg/settimana</h2><p class="muted">Ritmo iniziale orientativo per aumentare massa con surplus moderato. Lo correggiamo in base alla risposta reale.</p></div></section>
+  <section class="card"><small>ANDAMENTO</small><h2>Peso nel tempo</h2><canvas id="weightChartFull" height="280"></canvas></section>
+  <section class="card"><small>REGISTRO</small><h2>Misurazioni</h2><div id="weightHistory"></div></section>
+</section>
 </main>
-<footer>Dati allenamento: <code>data/workouts.json</code> • nutrizione: <code>data/nutrition.json</code></footer>
+<footer>Dati: <code>data/workouts.json</code> • <code>data/nutrition.json</code> • <code>data/bodyweight.json</code></footer>
 <script src="app.js"></script></body></html>
