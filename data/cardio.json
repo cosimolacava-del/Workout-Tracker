@@ -1,6 +1,17 @@
 {
-  "meta": {"title":"Cardio Log","updated":"2026-09-14","units":{"distance":"km","duration":"seconds","pace":"min/km","speed":"km/h","energy":"kcal"}},
+  "meta": {"title":"Cardio Log","updated":"2026-09-16","units":{"distance":"km","duration":"seconds","pace":"min/km","speed":"km/h","energy":"kcal"}},
   "activities": [
+    {
+      "id":"2026-09-16-run-1",
+      "date":"2026-09-16",
+      "type":"Corsa",
+      "distance_km":4.03,
+      "duration_seconds":1574,
+      "pace":"6:31",
+      "speed_kmh":9.22,
+      "source":"MapMyRun screenshot",
+      "note":"Corsa serale, partenza 21:44"
+    },
     {
       "id":"2026-09-14-run-1",
       "date":"2026-09-14",
