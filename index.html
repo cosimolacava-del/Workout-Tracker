@@ -16,6 +16,7 @@
 <main>
 <section class="panel active" id="tab-dashboard">
   <section id="stats" class="stats"></section>
+  <section class="card"><div class="head"><div><small>INDICE DI FORZA</small><h2><span id="forceIndex">—</span> <span class="muted" id="forceDelta"></span></h2></div></div><canvas id="forceChart" height="230"></canvas><p class="muted">Indice sintetico normalizzato (base 100) su panca piana, inclinata, rematore e stacco rumeno.</p></section>
   <section class="grid">
     <div class="card"><div class="head"><div><small>OGGI</small><h2>Calorie e macro</h2></div><div id="dashDate" class="muted"></div></div><div id="dashMacros" class="macro-grid"></div><div id="dashTargetNote" class="muted"></div></div>
     <div class="card"><small>ULTIMA SEDUTA</small><h2 id="latestTitle"></h2><div id="latest"></div></div>
@@ -34,6 +35,7 @@
 </section>
 
 <section class="panel" id="tab-training">
+  <section class="card"><small>FORZA COMPLESSIVA</small><h2>Indice di forza: <span id="forceIndexTraining">—</span> <span class="muted" id="forceDeltaTraining"></span></h2><canvas id="forceChartTraining" height="260"></canvas><p id="forceDetail" class="muted"></p></section>
   <section class="card"><div class="head"><div><small>PROGRESSI</small><h2>Trend forza stimata</h2></div><select id="exerciseSelect"></select></div><p class="muted">Forza stimata dalla migliore serie (carico e ripetizioni), non solo kg sollevati.</p><canvas id="exerciseChart" height="240"></canvas></section>
   <section class="grid"><div class="card"><small>ULTIMA SEDUTA</small><h2 id="latestTitleTraining"></h2><div id="latestTraining"></div></div><div class="card"><small>PROGRAMMA</small><h2>Home 3× settimana</h2><div id="program"></div></div></section>
   <section class="card"><div class="head"><div><small>ARCHIVIO</small><h2>Tutte le sedute</h2></div><input id="search" placeholder="Cerca esercizio…"></div><div id="sessions"></div></section>
@@ -52,4 +54,4 @@
 </section>
 </main>
 <footer>Dati: <code>data/workouts.json</code> • <code>data/nutrition.json</code> • <code>data/cardio.json</code> • <code>data/bodyweight.json</code></footer>
-<script src="app.js?v=20260920-trend2"></script></body></html>
+<script src="app.js?v=20261017-force1"></script></body></html>
