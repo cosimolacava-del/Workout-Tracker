@@ -97,7 +97,7 @@ function renderForce(){
 function drawForceCharts(){
  const pts=forceHistory();
  lineChart('forceChart',pts,{empty:'Non ci sono ancora sei esercizi di riferimento.',decimals:1});
- lineChart('forceChartTraining',pts,{empty:'Non ci sono ancora quattro esercizi di riferimento.',decimals:1});
+ lineChart('forceChartTraining',pts,{empty:'Non ci sono ancora sei esercizi di riferimento.',decimals:1});
 }
 
 function drawCardioDistance(){const pts=(CARDIO?.activities||[]).slice().sort((a,b)=>(a.start_datetime||a.date||'').localeCompare(b.start_datetime||b.date||'')).filter(a=>a.distance_km!=null).map(a=>({label:fmtDate(a.date).slice(0,5),value:a.distance_km}));lineChart('cardioDistanceChart',pts,{zero:true,empty:'Nessuna corsa registrata.',decimals:1})}
