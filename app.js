@@ -63,10 +63,12 @@ function drawExercise(name){
 
 
 const FORCE_LIFTS=[
- {id:'flat',label:'Panca piana',names:['Panca piana manubri']},
- {id:'incline',label:'Panca inclinata',names:['Panca inclinata manubri']},
- {id:'row',label:'Rematore',names:['Rematore due manubri','Rematore 2 manubri']},
- {id:'rdl',label:'Stacco rumeno',names:['Romanian Deadlift manubri','Romanian deadlift manubri']}
+ {id:'chest',label:'Petto · panca piana',names:['Panca piana manubri']},
+ {id:'back',label:'Schiena · rematore',names:['Rematore due manubri','Rematore 2 manubri']},
+ {id:'legs',label:'Gambe · stacco rumeno',names:['Romanian Deadlift manubri','Romanian deadlift manubri']},
+ {id:'shoulders',label:'Spalle · military press',names:['Military press in piedi','Military press manubri']},
+ {id:'biceps',label:'Bicipiti · curl',names:['Curl con manubri','Curl manubri','Curl in piedi']},
+ {id:'triceps',label:'Tricipiti · skull crusher',names:['Skull crusher manubri','Skull crusher su panca']}
 ];
 function forceHistory(){
  const baseline={},last={},history=[];
@@ -89,12 +91,12 @@ function renderForce(){
  for(const id of ['forceIndex','forceIndexTraining']){const el=document.getElementById(id);if(el)el.textContent=latest?latest.value.toFixed(1):'—'}
  for(const id of ['forceDelta','forceDeltaTraining']){const el=document.getElementById(id);if(el)el.textContent=latest?(latest.value-100>=0?'+':'')+(latest.value-100).toFixed(1)+'% dalla baseline':'Dati insufficienti'}
  const note=document.getElementById('forceDetail');
- if(note)note.textContent=latest?'Baseline: prime misure disponibili per ciascuno dei quattro esercizi. Media geometrica dei rapporti tra 1RM stimato (Epley) attuale e iniziale. Si usa l’ultima misura disponibile per ciascun esercizio, anche nei giorni in cui non viene eseguito. Unità: indice, base 100. Le sedute senza data sono escluse. Valori indicativi, non misure dirette di forza massimale.':'Servono dati datati per tutti e quattro gli esercizi.';
+ if(note)note.textContent=latest?'Baseline: prime misure disponibili per ciascuno dei sei esercizi. Media geometrica dei rapporti tra 1RM stimato (Epley) attuale e iniziale. Si usa l’ultima misura disponibile per ciascun esercizio, anche nei giorni in cui non viene eseguito. Unità: indice, base 100. Le sedute senza data sono escluse. Valori indicativi, non misure dirette di forza massimale.':'Servono dati datati per tutti e sei gli esercizi.';
  drawForceCharts();
 }
 function drawForceCharts(){
  const pts=forceHistory();
- lineChart('forceChart',pts,{empty:'Non ci sono ancora quattro esercizi di riferimento.',decimals:1});
+ lineChart('forceChart',pts,{empty:'Non ci sono ancora sei esercizi di riferimento.',decimals:1});
  lineChart('forceChartTraining',pts,{empty:'Non ci sono ancora quattro esercizi di riferimento.',decimals:1});
 }
 
