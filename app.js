@@ -15,8 +15,8 @@ function render(){
  const lw=latestWorkout(), ln=latestNutrition(), wt=latestWeight(), ca=CARDIO?.activities||[];
  $('#stats').innerHTML=[['Sedute',sessions.length],['Serie',sets],['Cardio',ca.length],['Peso',wt?`${wt.kg} kg`:'—']].map(x=>`<div class="stat"><b>${x[1]}</b><span class="muted">${x[0]}</span></div>`).join('');
  if(lw){$('#latestTitle').textContent=lw.label;$('#latest').innerHTML=lw.exercises.map(exHTML).join('');$('#latestTitleTraining').textContent=lw.label;$('#latestTraining').innerHTML=lw.exercises.map(exHTML).join('')}
- renderNutrition(); renderTraining(); renderWeight(); renderCardio();
- drawCalories('kcalChart'); drawCalories('kcalChartNutrition'); drawWeight('weightChart'); drawWeight('weightChartFull');
+ renderNutrition(); renderTraining(); renderWeight(); renderCardio(); renderForce();
+ drawCalories('kcalChart'); drawCalories('kcalChartNutrition'); drawWeight('weightChart'); drawWeight('weightChartFull'); drawForceCharts();
  if(ln){const t=dayTotals(ln);$('#dashDate').textContent=fmtDate(ln.date);$('#dashMacros').innerHTML=macroCards(t);$('#dashTargetNote').textContent=`Target: ${NUTRITION.targets.energy} kcal • P ${NUTRITION.targets.protein} g • C ${NUTRITION.targets.carbs} g • G ${NUTRITION.targets.fat} g`}
 }
 function macroCards(t){const arr=[['kcal',Math.round(t.energy||0),'kcal'],['Proteine',Math.round(t.protein||0),'g'],['Carbo',Math.round(t.carbs||0),'g'],['Grassi',Math.round(t.fat||0),'g']];return arr.map(x=>`<div class="macro"><span class="muted">${x[0]}</span><b>${x[1]} ${x[2]}</b></div>`).join('')}
@@ -61,10 +61,47 @@ function drawExercise(name){
  lineChart('exerciseChart',pts,{empty:'Nessun dato con carico e ripetizioni.',decimals:1});
 }
 
+
+const FORCE_LIFTS=[
+ {id:'flat',label:'Panca piana',names:['Panca piana manubri']},
+ {id:'incline',label:'Panca inclinata',names:['Panca inclinata manubri']},
+ {id:'row',label:'Rematore',names:['Rematore due manubri','Rematore 2 manubri']},
+ {id:'rdl',label:'Stacco rumeno',names:['Romanian Deadlift manubri','Romanian deadlift manubri']}
+];
+function forceHistory(){
+ const baseline={},last={},history=[];
+ const sessions=(DB.sessions||[]).filter(s=>s.date).slice().sort((a,b)=>a.date.localeCompare(b.date));
+ for(const s of sessions){
+  for(const lift of FORCE_LIFTS){
+   const exercises=s.exercises.filter(e=>lift.names.includes(e.name));
+   const estimates=exercises.flatMap(e=>e.sets||[]).filter(x=>Number.isFinite(x.kg)&&Number.isFinite(x.reps)&&x.kg>0&&x.reps>=1&&x.reps<=20).map(x=>x.kg*(1+x.reps/30));
+   if(estimates.length){const value=Math.max(...estimates);last[lift.id]=value;if(baseline[lift.id]==null)baseline[lift.id]=value}
+  }
+  if(FORCE_LIFTS.every(l=>last[l.id]!=null)){
+   const score=100*Math.exp(FORCE_LIFTS.reduce((acc,l)=>acc+Math.log(last[l.id]/baseline[l.id]),0)/FORCE_LIFTS.length);
+   history.push({date:s.date,label:fmtDate(s.date).slice(0,5),value:+score.toFixed(1),components:FORCE_LIFTS.map(l=>({label:l.label,value:last[l.id],baseline:baseline[l.id]}))});
+  }
+ }
+ return history;
+}
+function renderForce(){
+ const pts=forceHistory(),latest=pts[pts.length-1],first=pts[0];
+ for(const id of ['forceIndex','forceIndexTraining']){const el=document.getElementById(id);if(el)el.textContent=latest?latest.value.toFixed(1):'—'}
+ for(const id of ['forceDelta','forceDeltaTraining']){const el=document.getElementById(id);if(el)el.textContent=latest?(latest.value-100>=0?'+':'')+(latest.value-100).toFixed(1)+'% dalla baseline':'Dati insufficienti'}
+ const note=document.getElementById('forceDetail');
+ if(note)note.textContent=latest?'Baseline: prime misure disponibili per ciascuno dei quattro esercizi. Media geometrica dei rapporti tra 1RM stimato (Epley) attuale e iniziale. Si usa l’ultima misura disponibile per ciascun esercizio, anche nei giorni in cui non viene eseguito. Unità: indice, base 100. Le sedute senza data sono escluse. Valori indicativi, non misure dirette di forza massimale.':'Servono dati datati per tutti e quattro gli esercizi.';
+ drawForceCharts();
+}
+function drawForceCharts(){
+ const pts=forceHistory();
+ lineChart('forceChart',pts,{empty:'Non ci sono ancora quattro esercizi di riferimento.',decimals:1});
+ lineChart('forceChartTraining',pts,{empty:'Non ci sono ancora quattro esercizi di riferimento.',decimals:1});
+}
+
 function drawCardioDistance(){const pts=(CARDIO?.activities||[]).slice().sort((a,b)=>(a.start_datetime||a.date||'').localeCompare(b.start_datetime||b.date||'')).filter(a=>a.distance_km!=null).map(a=>({label:fmtDate(a.date).slice(0,5),value:a.distance_km}));lineChart('cardioDistanceChart',pts,{zero:true,empty:'Nessuna corsa registrata.',decimals:1})}
 function paceSeconds(p){if(!p)return null;const m=String(p).match(/(\d+):(\d+)/);return m?Number(m[1])*60+Number(m[2]):null}
 function drawCardioPace(){const pts=(CARDIO?.activities||[]).slice().sort((a,b)=>(a.start_datetime||a.date||'').localeCompare(b.start_datetime||b.date||'')).map(a=>({label:fmtDate(a.date).slice(0,5),value:paceSeconds(a.pace)})).filter(x=>x.value!=null);lineChart('cardioPaceChart',pts,{empty:'Nessun passo medio disponibile.'})}
-function switchTab(name){$$('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));$$('.panel').forEach(p=>p.classList.toggle('active',p.id===`tab-${name}`));setTimeout(()=>{if(name==='dashboard'){drawCalories('kcalChart');drawWeight('weightChart')}if(name==='nutrition')drawCalories('kcalChartNutrition');if(name==='training'&&$('#exerciseSelect').value)drawExercise($('#exerciseSelect').value);if(name==='cardio'){drawCardioDistance();drawCardioPace()}if(name==='weight')drawWeight('weightChartFull')},20)}
+function switchTab(name){$$('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));$$('.panel').forEach(p=>p.classList.toggle('active',p.id===`tab-${name}`));setTimeout(()=>{if(name==='dashboard'){drawCalories('kcalChart');drawWeight('weightChart');drawForceCharts()}if(name==='nutrition')drawCalories('kcalChartNutrition');if(name==='training'){if($('#exerciseSelect').value)drawExercise($('#exerciseSelect').value);drawForceCharts()}if(name==='cardio'){drawCardioDistance();drawCardioPace()}if(name==='weight')drawWeight('weightChartFull')},20)}
 Promise.all([
  fetch('data/workouts.json?v='+Date.now()).then(r=>r.json()),
  fetch('data/nutrition.json?v='+Date.now()).then(r=>r.json()),
