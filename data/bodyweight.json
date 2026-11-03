@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Bodyweight Log",
-    "updated": "2026-09-14",
+    "updated": "2026-11-03",
     "unit": "kg"
   },
   "goal": {
@@ -10,5 +10,20 @@
     "weekly_change_max_kg": 0.2,
     "note": "Trend orientativo: crescita lenta e regolare; il target calorico va corretto se il peso resta fermo o sale troppo rapidamente per più settimane."
   },
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-10-31",
+      "kg": 68.3,
+      "body_fat_percent": 21,
+      "measurement_timing": "post_workout",
+      "note": "Massa grassa stimata 21,0% · dopo allenamento"
+    },
+    {
+      "date": "2026-11-03",
+      "kg": 68.05,
+      "body_fat_percent": 21.1,
+      "measurement_timing": "pre_workout",
+      "note": "Massa grassa stimata 21,1% · prima allenamento"
+    }
+  ]
 }
