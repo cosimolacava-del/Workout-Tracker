@@ -2686,6 +2686,15 @@
               "reps": 15
             }
           ]
+        },
+        {
+          "name": "Hip thrust bilanciere",
+          "sets": [
+            {
+              "kg": 31,
+              "reps": 15
+            }
+          ]
         }
       ]
     }
