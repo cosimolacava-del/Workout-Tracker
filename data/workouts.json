@@ -2660,6 +2660,15 @@
               "reps": 13
             }
           ]
+        },
+        {
+          "name": "Curl con manubri",
+          "sets": [
+            {
+              "kg": 10.7,
+              "reps": 11
+            }
+          ]
         }
       ]
     }
