@@ -2635,6 +2635,11 @@
               "kg": 10.7,
               "reps": 12,
               "perLeg": true
+            },
+            {
+              "kg": 10.7,
+              "reps": 11,
+              "perLeg": true
             }
           ]
         }
