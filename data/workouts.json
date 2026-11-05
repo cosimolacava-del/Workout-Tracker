@@ -2592,7 +2592,7 @@
       "date": "2026-11-05",
       "label": "Home C — progressione",
       "location": "Casa",
-      "status": "in_progress",
+      "status": "completed",
       "exercises": [
         {
           "name": "Panca piana manubri",
@@ -2697,6 +2697,10 @@
             {
               "kg": 31,
               "reps": 14
+            },
+            {
+              "kg": 31,
+              "reps": 13
             }
           ]
         }
