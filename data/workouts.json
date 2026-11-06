@@ -3,7 +3,7 @@
     "title": "Workout Registry",
     "goal": "Aumento massa magra",
     "program": "Home 3x/week",
-    "updated": "2026-09-23",
+    "updated": "2026-11-06",
     "dumbbell_load_convention": "kg per manubrio"
   },
   "sessions": [
@@ -2714,33 +2714,33 @@
         "3×8–12"
       ],
       [
+        "Rematore due manubri",
+        "3×8–12"
+      ],
+      [
         "Bulgarian split squat",
         "3×8–12/gamba"
       ],
       [
-        "Rematore 2 manubri",
-        "3×8–12"
-      ],
-      [
-        "Military press",
+        "Military press in piedi",
         "2×8–12"
       ],
       [
-        "Alzate laterali",
-        "2×12–20"
-      ],
-      [
-        "Curl",
+        "Curl inclinato manubri",
         "2×10–15"
       ],
       [
-        "Skull crusher",
+        "Estensioni tricipiti sopra la testa",
         "2×10–15"
+      ],
+      [
+        "Alzate laterali manubri",
+        "3×12–20"
       ]
     ],
     "B": [
       [
-        "Romanian deadlift manubri",
+        "Romanian deadlift bilanciere",
         "3×8–12"
       ],
       [
@@ -2748,24 +2748,20 @@
         "3×8–12"
       ],
       [
-        "Rematore 2 manubri",
+        "Rematore petto appoggiato panca inclinata",
         "3×8–12"
       ],
       [
-        "Goblet squat",
+        "Squat sumo manubrio",
         "3×10–15"
       ],
       [
-        "Alzate laterali",
-        "2×12–20"
-      ],
-      [
-        "Curl martello",
+        "Curl di concentrazione",
         "2×10–15"
       ],
       [
-        "Plank",
-        "2×30–60 s"
+        "Alzate laterali manubri",
+        "3×12–20"
       ]
     ],
     "C": [
@@ -2774,28 +2770,28 @@
         "3×10–15"
       ],
       [
-        "Affondi indietro",
+        "Rematore due manubri",
+        "3×10–15"
+      ],
+      [
+        "Affondi inversi manubri",
         "3×10–15/gamba"
       ],
       [
-        "Rematore 2 manubri",
+        "Military press in piedi",
+        "2×10–15"
+      ],
+      [
+        "Curl con manubri",
+        "2×10–15"
+      ],
+      [
+        "Estensioni tricipiti sopra la testa",
+        "2×10–15"
+      ],
+      [
+        "Hip thrust bilanciere",
         "3×10–15"
-      ],
-      [
-        "Hip thrust",
-        "3×10–15"
-      ],
-      [
-        "Military press",
-        "2×10–15"
-      ],
-      [
-        "Curl",
-        "2×10–15"
-      ],
-      [
-        "Skull crusher",
-        "2×10–15"
       ]
     ]
   }
