@@ -1,1 +1,44 @@
-{"meta":{"title":"Bodyweight Log","updated":"2026-11-05","unit":"kg","measurement_protocol":"Misurazione sempre la sera prima dell'allenamento"},"goal":{"type":"lean_gain","weekly_change_min_kg":0.1,"weekly_change_max_kg":0.2,"note":"Trend orientativo: crescita lenta e regolare; il target calorico va corretto se il peso resta fermo o sale troppo rapidamente per più settimane."},"entries":[{"date":"2026-10-31","kg":68.3,"body_fat_percent":21,"measurement_timing":"post_workout","note":"Massa grassa stimata 21,0% · dopo allenamento"},{"date":"2026-11-03","kg":68.05,"body_fat_percent":21.1,"measurement_timing":"pre_workout","note":"Massa grassa stimata 21,1% · prima allenamento"},{"date":"2026-11-05","kg":68.55,"body_fat_percent":21.55,"measurement_timing":"pre_workout","note":"Massa grassa stimata 21,55% · sera, prima allenamento"}]}
+{
+  "meta": {
+    "title": "Bodyweight Log",
+    "updated": "2026-11-05",
+    "unit": "kg",
+    "measurement_protocol": "Misurazione sempre la sera prima dell'allenamento"
+  },
+  "goal": {
+    "type": "lean_gain",
+    "weekly_change_min_kg": 0.1,
+    "weekly_change_max_kg": 0.2,
+    "note": "Trend orientativo: crescita lenta e regolare; il target calorico va corretto se il peso resta fermo o sale troppo rapidamente per più settimane."
+  },
+  "entries": [
+    {
+      "date": "2026-10-31",
+      "kg": 68.3,
+      "body_fat_percent": 21,
+      "measurement_timing": "post_workout",
+      "note": "Massa grassa stimata 21,0% · dopo allenamento"
+    },
+    {
+      "date": "2026-11-03",
+      "kg": 68.05,
+      "body_fat_percent": 21.1,
+      "measurement_timing": "pre_workout",
+      "note": "Massa grassa stimata 21,1% · prima allenamento"
+    },
+    {
+      "date": "2026-11-05",
+      "kg": 68.55,
+      "body_fat_percent": 21.55,
+      "measurement_timing": "pre_workout",
+      "note": "Massa grassa stimata 21,55% · sera, prima allenamento"
+    },
+    {
+      "date": "2026-11-08",
+      "kg": 69.35,
+      "body_fat_percent": 21.9,
+      "measurement_timing": "pre_workout",
+      "note": "Massa grassa stimata 21,9% · sera, prima allenamento"
+    }
+  ]
+}
