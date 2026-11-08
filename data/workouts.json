@@ -2781,6 +2781,15 @@
               "reps": 12
             }
           ]
+        },
+        {
+          "name": "Curl inclinato manubri",
+          "sets": [
+            {
+              "kg": 7.7,
+              "reps": 15
+            }
+          ]
         }
       ]
     }
