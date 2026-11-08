@@ -2754,6 +2754,12 @@
               "kg": 12.7,
               "reps": 15,
               "perLeg": true
+            },
+            {
+              "kg": 12.7,
+              "reps": 12,
+              "perLeg": true,
+              "note": "discesa 3 s"
             }
           ]
         }
