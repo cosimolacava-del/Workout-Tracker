@@ -2768,6 +2768,15 @@
               "note": "discesa 3 s"
             }
           ]
+        },
+        {
+          "name": "Military press in piedi",
+          "sets": [
+            {
+              "kg": 12.7,
+              "reps": 12
+            }
+          ]
         }
       ]
     }
