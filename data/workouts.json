@@ -2729,6 +2729,15 @@
               "reps": 12
             }
           ]
+        },
+        {
+          "name": "Rematore due manubri",
+          "sets": [
+            {
+              "kg": 18.7,
+              "reps": 12
+            }
+          ]
         }
       ]
     }
