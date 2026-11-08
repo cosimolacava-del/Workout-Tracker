@@ -48,4 +48,4 @@ Agisci come un **vero personal trainer**, non solo come registro:
 ## Backup e sito
 
 - Backup storici come branch `backup/workout-registry-AAAA-MM-GG-v1` (ultimo: 2026-11-01). Il backup settimanale della domenica girava su ChatGPT e non è migrato automaticamente.
-- `index.html` / `app.js`: dashboard GitHub Pages di sola visualizzazione. Indice di forza (IF) in `app.js` (`FORCE_LIFTS`): alcuni alias non coprono i nomi usati (es. `Estensioni tricipiti sopra la testa`, `Romanian deadlift bilanciere`) → non presentare l'IF come definitivo finché non è corretto.
+- `index.html` / `app.js`: dashboard GitHub Pages di sola visualizzazione. Indice di forza (IF) in `app.js` (`FORCE_LIFTS`): dall'08/11/2026 metodo **a catena per varianti** (ogni variante confrontata solo con se stessa, nuove varianti agganciate al livello del gruppo). Se compare un nome di esercizio nuovo per uno dei sei gruppi, aggiungilo come variante in `FORCE_LIFTS`, altrimenti non viene contato.

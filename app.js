@@ -62,26 +62,36 @@ function drawExercise(name){
 }
 
 
+// Indice di forza a catena: ogni gruppo ha un livello (1 = baseline alla prima misura).
+// A ogni seduta il livello del gruppo si moltiplica per il rapporto tra la misura attuale e la precedente
+// della STESSA variante; la prima comparsa di una variante la aggancia al livello corrente senza modificarlo.
+// Nessun confronto diretto di kg tra esercizi diversi.
 const FORCE_LIFTS=[
- {id:'chest',label:'Petto · panca piana',names:['Panca piana manubri']},
- {id:'back',label:'Schiena · rematore',names:['Rematore due manubri','Rematore 2 manubri']},
- {id:'legs',label:'Gambe · stacco rumeno',names:['Romanian Deadlift manubri','Romanian deadlift manubri']},
- {id:'shoulders',label:'Spalle · military press',names:['Military press in piedi','Military press manubri']},
- {id:'biceps',label:'Bicipiti · curl',names:['Curl con manubri','Curl manubri','Curl in piedi']},
- {id:'triceps',label:'Tricipiti · skull crusher',names:['Skull crusher manubri','Skull crusher su panca']}
+ {id:'chest',label:'Petto · panca piana',variants:[['Panca piana manubri']]},
+ {id:'back',label:'Schiena · rematore',variants:[['Rematore due manubri','Rematore 2 manubri','Rematore manubri'],['Rematore petto appoggiato panca inclinata']]},
+ {id:'legs',label:'Gambe · stacco rumeno',variants:[['Romanian Deadlift manubri','Romanian deadlift manubri'],['Romanian deadlift bilanciere']]},
+ {id:'shoulders',label:'Spalle · military press',variants:[['Military press in piedi','Military press manubri']]},
+ {id:'biceps',label:'Bicipiti · curl',variants:[['Curl con manubri','Curl manubri','Curl in piedi'],['Curl inclinato manubri'],['Curl di concentrazione'],['Hammer curl','Curl martello']]},
+ {id:'triceps',label:'Tricipiti · estensioni',variants:[['Skull crusher manubri','Skull crusher su panca'],['Estensioni tricipiti sopra la testa']]}
 ];
 function forceHistory(){
- const baseline={},last={},history=[];
+ const level={},lastVal={},history=[];
  const sessions=(DB.sessions||[]).filter(s=>s.date).slice().sort((a,b)=>a.date.localeCompare(b.date));
  for(const s of sessions){
   for(const lift of FORCE_LIFTS){
-   const exercises=s.exercises.filter(e=>lift.names.includes(e.name));
-   const estimates=exercises.flatMap(e=>e.sets||[]).filter(x=>Number.isFinite(x.kg)&&Number.isFinite(x.reps)&&x.kg>0&&x.reps>=1&&x.reps<=20).map(x=>x.kg*(1+x.reps/30));
-   if(estimates.length){const value=Math.max(...estimates);last[lift.id]=value;if(baseline[lift.id]==null)baseline[lift.id]=value}
+   let logSum=0,n=0,seen=false;
+   lift.variants.forEach((names,i)=>{
+    const estimates=(s.exercises||[]).filter(e=>names.includes(e.name)).flatMap(e=>e.sets||[]).filter(x=>Number.isFinite(x.kg)&&Number.isFinite(x.reps)&&x.kg>0&&x.reps>=1&&x.reps<=20).map(x=>x.kg*(1+x.reps/30));
+    if(!estimates.length)return;
+    const v=Math.max(...estimates),key=lift.id+'#'+i;seen=true;
+    if(lastVal[key]){logSum+=Math.log(v/lastVal[key]);n++}
+    lastVal[key]=v;
+   });
+   if(seen)level[lift.id]=(level[lift.id]??1)*(n?Math.exp(logSum/n):1);
   }
-  if(FORCE_LIFTS.every(l=>last[l.id]!=null)){
-   const score=100*Math.exp(FORCE_LIFTS.reduce((acc,l)=>acc+Math.log(last[l.id]/baseline[l.id]),0)/FORCE_LIFTS.length);
-   history.push({date:s.date,label:fmtDate(s.date).slice(0,5),value:+score.toFixed(1),components:FORCE_LIFTS.map(l=>({label:l.label,value:last[l.id],baseline:baseline[l.id]}))});
+  if(FORCE_LIFTS.every(l=>level[l.id]!=null)){
+   const score=100*Math.exp(FORCE_LIFTS.reduce((acc,l)=>acc+Math.log(level[l.id]),0)/FORCE_LIFTS.length);
+   history.push({date:s.date,label:fmtDate(s.date).slice(0,5),value:+score.toFixed(1),components:FORCE_LIFTS.map(l=>({label:l.label,value:+(100*level[l.id]).toFixed(1)}))});
   }
  }
  return history;
@@ -91,7 +101,7 @@ function renderForce(){
  for(const id of ['forceIndex','forceIndexTraining']){const el=document.getElementById(id);if(el)el.textContent=latest?latest.value.toFixed(1):'—'}
  for(const id of ['forceDelta','forceDeltaTraining']){const el=document.getElementById(id);if(el)el.textContent=latest?(latest.value-100>=0?'+':'')+(latest.value-100).toFixed(1)+'% dalla baseline':'Dati insufficienti'}
  const note=document.getElementById('forceDetail');
- if(note)note.textContent=latest?'Baseline: prime misure disponibili per ciascuno dei sei esercizi. Media geometrica dei rapporti tra 1RM stimato (Epley) attuale e iniziale. Si usa l’ultima misura disponibile per ciascun esercizio, anche nei giorni in cui non viene eseguito. Unità: indice, base 100. Le sedute senza data sono escluse. Valori indicativi, non misure dirette di forza massimale.':'Servono dati datati per tutti e sei gli esercizi.';
+ if(note)note.textContent=latest?'Sei gruppi muscolari, baseline 100 alla prima misura di ciascun gruppo. A ogni seduta il livello del gruppo cambia del rapporto tra 1RM stimato (Epley) attuale e precedente della stessa variante di esercizio; una variante nuova viene agganciata al livello già raggiunto senza modificarlo. Indice = media geometrica dei livelli dei gruppi; si usa l’ultimo livello disponibile anche nei giorni in cui il gruppo non viene allenato. Unità: indice, base 100. Le sedute senza data sono escluse. Valori indicativi, non misure dirette di forza massimale.':'Servono dati datati per tutti e sei gli esercizi.';
  drawForceCharts();
 }
 function drawForceCharts(){
