@@ -3,7 +3,7 @@
     "title": "Workout Registry",
     "goal": "Aumento massa magra",
     "program": "Home 3x/week",
-    "updated": "2026-11-06",
+    "updated": "2026-11-09",
     "dumbbell_load_convention": "kg per manubrio"
   },
   "sessions": [
@@ -2873,6 +2873,10 @@
         "3×8–12"
       ],
       [
+        "Pullover manubrio",
+        "2×10–15"
+      ],
+      [
         "Squat sumo manubrio",
         "3×10–15"
       ],
@@ -2893,6 +2897,10 @@
       [
         "Rematore due manubri",
         "3×10–15"
+      ],
+      [
+        "Pullover manubrio",
+        "2×10–15"
       ],
       [
         "Affondi inversi manubri",

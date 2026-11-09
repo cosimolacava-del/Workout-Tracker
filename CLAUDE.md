@@ -32,7 +32,7 @@ Agisci come un **vero personal trainer**, non solo come registro:
 ## Programma e progressione
 
 - Tre sedute a settimana, a casa, la sera, rotazione **Home A → B → C**. Controlla sempre nello storico quale giorno tocca (attenzione a giorni saltati).
-- Il programma di riferimento è `program` in `data/workouts.json` (aggiornato il 06/11/2026: alzate laterali 3 serie, rematore con petto appoggiato in B, plank eliminato). Non reintrodurre il plank.
+- Il programma di riferimento è `program` in `data/workouts.json` (aggiornato il 06/11/2026: alzate laterali 3 serie, rematore con petto appoggiato in B, plank eliminato; 09/11/2026: `Pullover manubrio` 2×10–15 in B e C dopo il rematore, al posto di una tirata verticale). Non reintrodurre il plank. Quando Cosimo avrà la lat machine (autocostruita), proporre di sostituire il pullover con lat machine 3×8–12 in A e C.
 - Usa i **nomi esatti** degli esercizi già presenti in `sessions[].exercises[].name`: nomi diversi spezzano grafici e indice di forza.
 - Attrezzatura: panca, manubri regolabili **fino a 30 kg/mano**, bilanciere **fino a 70 kg totali**, **nessun rack**: niente panca piana o squat col bilanciere da rack. Ordina gli esercizi per ridurre i cambi dischi.
 - Convenzioni carico: manubri = kg per manubrio; affondi/split squat con `perLeg: true`; bilanciere = carico totale.
