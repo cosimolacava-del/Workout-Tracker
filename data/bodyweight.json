@@ -39,6 +39,13 @@
       "body_fat_percent": 21.9,
       "measurement_timing": "pre_workout",
       "note": "Massa grassa stimata 21,9% · sera, prima allenamento"
+    },
+    {
+      "date": "2026-11-10",
+      "kg": 68.65,
+      "body_fat_percent": 21.5,
+      "measurement_timing": "pre_workout",
+      "note": "Massa grassa stimata 21,5% · sera, prima allenamento"
     }
   ]
 }
