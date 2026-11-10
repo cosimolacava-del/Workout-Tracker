@@ -2826,6 +2826,24 @@
           ]
         }
       ]
+    },
+    {
+      "id": "2026-11-10-home-b",
+      "date": "2026-11-10",
+      "label": "Home B — progressione",
+      "location": "Casa",
+      "status": "in_progress",
+      "exercises": [
+        {
+          "name": "Romanian deadlift bilanciere",
+          "sets": [
+            {
+              "kg": 39,
+              "reps": 15
+            }
+          ]
+        }
+      ]
     }
   ],
   "program": {
