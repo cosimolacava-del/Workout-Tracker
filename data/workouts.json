@@ -2832,7 +2832,7 @@
       "date": "2026-11-10",
       "label": "Home B — progressione",
       "location": "Casa",
-      "status": "in_progress",
+      "status": "completed",
       "exercises": [
         {
           "name": "Romanian deadlift bilanciere",
@@ -2936,6 +2936,10 @@
             {
               "kg": 6.7,
               "reps": 16
+            },
+            {
+              "kg": 6.7,
+              "reps": 15
             },
             {
               "kg": 6.7,
