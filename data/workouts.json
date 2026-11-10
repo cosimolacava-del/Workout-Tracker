@@ -2884,6 +2884,15 @@
               "reps": 15
             }
           ]
+        },
+        {
+          "name": "Rematore petto appoggiato panca inclinata",
+          "sets": [
+            {
+              "kg": 16.7,
+              "reps": 12
+            }
+          ]
         }
       ]
     }
