@@ -3024,6 +3024,15 @@
               "note": "discesa 3 s"
             }
           ]
+        },
+        {
+          "name": "Curl con manubri",
+          "sets": [
+            {
+              "kg": 10.7,
+              "reps": 12
+            }
+          ]
         }
       ]
     }
