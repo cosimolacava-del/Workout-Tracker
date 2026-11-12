@@ -2954,7 +2954,7 @@
       "date": "2026-11-12",
       "label": "Home C — progressione",
       "location": "Casa",
-      "status": "in_progress",
+      "status": "completed",
       "exercises": [
         {
           "name": "Panca piana manubri",
@@ -3054,6 +3054,10 @@
         {
           "name": "Estensioni tricipiti sopra la testa",
           "sets": [
+            {
+              "kg": 8.7,
+              "reps": 12
+            },
             {
               "kg": 8.7,
               "reps": 12
