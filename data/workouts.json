@@ -3037,6 +3037,15 @@
               "reps": 12
             }
           ]
+        },
+        {
+          "name": "Military press in piedi",
+          "sets": [
+            {
+              "kg": 12.7,
+              "reps": 12
+            }
+          ]
         }
       ]
     }
