@@ -2948,6 +2948,24 @@
           ]
         }
       ]
+    },
+    {
+      "id": "2026-11-12-home-c",
+      "date": "2026-11-12",
+      "label": "Home C — progressione",
+      "location": "Casa",
+      "status": "in_progress",
+      "exercises": [
+        {
+          "name": "Panca piana manubri",
+          "sets": [
+            {
+              "kg": 24.7,
+              "reps": 12
+            }
+          ]
+        }
+      ]
     }
   ],
   "program": {
