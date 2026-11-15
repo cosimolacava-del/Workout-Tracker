@@ -54,6 +54,13 @@
       "measurement_timing": "pre_workout",
       "time_of_day": "morning",
       "note": "Massa grassa stimata 21,7% · MATTINA a digiuno, prima allenamento: non confrontabile direttamente con le pesate serali"
+    },
+    {
+      "date": "2026-11-15",
+      "kg": 69.25,
+      "body_fat_percent": 21.9,
+      "measurement_timing": "pre_workout",
+      "note": "Massa grassa stimata 21,9% · sera, prima allenamento"
     }
   ]
 }
