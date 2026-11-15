@@ -3123,6 +3123,16 @@
               "reps": 10
             }
           ]
+        },
+        {
+          "name": "Bulgarian split squat",
+          "sets": [
+            {
+              "kg": 14.7,
+              "reps": 10,
+              "perLeg": true
+            }
+          ]
         }
       ]
     }
