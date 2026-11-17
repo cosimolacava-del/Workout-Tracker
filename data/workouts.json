@@ -3242,6 +3242,15 @@
               "reps": 12
             }
           ]
+        },
+        {
+          "name": "Squat sumo manubrio",
+          "sets": [
+            {
+              "kg": 24.7,
+              "reps": 13
+            }
+          ]
         }
       ]
     }
