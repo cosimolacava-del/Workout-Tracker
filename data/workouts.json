@@ -3207,7 +3207,7 @@
       "date": "2026-11-17",
       "label": "Home B — progressione",
       "location": "Casa",
-      "status": "in_progress",
+      "status": "completed",
       "exercises": [
         {
           "name": "Romanian deadlift bilanciere",
@@ -3308,6 +3308,10 @@
         {
           "name": "Alzate laterali manubri",
           "sets": [
+            {
+              "kg": 6.7,
+              "reps": 14
+            },
             {
               "kg": 6.7,
               "reps": 14
