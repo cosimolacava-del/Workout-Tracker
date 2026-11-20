@@ -3429,6 +3429,15 @@
               "reps": 12
             }
           ]
+        },
+        {
+          "name": "Skull crusher manubri",
+          "sets": [
+            {
+              "kg": 7.7,
+              "reps": 12
+            }
+          ]
         }
       ]
     }
