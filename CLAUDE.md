@@ -37,7 +37,7 @@ Agisci come un **vero personal trainer**, non solo come registro:
 - Attrezzatura: panca, manubri regolabili **fino a 30 kg/mano**, bilanciere **fino a 70 kg totali**, **nessun rack**: niente panca piana o squat col bilanciere da rack. Ordina gli esercizi per ridurre i cambi dischi.
 - Convenzioni carico: manubri = kg per manubrio; affondi/split squat con `perLeg: true`; bilanciere = carico totale.
 - Progressione a **doppia progressione**: si aumenta il carico solo quando tutte le serie raggiungono il limite alto del range con buona tecnica. Niente aumenti casuali.
-- Programma da mantenere finché progredisce; verifica a fine dicembre 2026; settimana di scarico **concordata per il 23–29/11/2026**: stessi esercizi e carichi, una serie in meno per esercizio.
+- Programma da mantenere finché progredisce; verifica a fine dicembre 2026; settimana di scarico **concordata per il 23–29/11/2026**: stessi esercizi e carichi, tre sedute A/B/C, una serie in meno per esercizio (3→2, 2→1) e ogni serie chiusa a **3–4 ripetizioni dal cedimento** (circa 8–9 nel range 8–12, 10–11 nel range 10–15); focus sulla tecnica, calorie non in deficit (meglio +150–200 kcal), sonno abbondante. Le ripetizioni dello scarico non sono un test: non usarle per decidere i carichi (riferimento: consenso Delphi Bell et al. 2023; Coleman et al. 2024 sconsiglia lo stop completo).
 
 ## Altri registri
 
