@@ -2243,7 +2243,8 @@
               "kg": 6,
               "reps": 12
             }
-          ]
+          ],
+          "note": "Un solo manubrio impugnato a due mani (kg = peso del manubrio)"
         },
         {
           "name": "Alzate laterali",
@@ -2480,7 +2481,8 @@
               "kg": 7,
               "reps": 12
             }
-          ]
+          ],
+          "note": "Un solo manubrio impugnato a due mani (kg = peso del manubrio)"
         }
       ]
     },
@@ -2685,7 +2687,8 @@
               "kg": 7,
               "reps": 15
             }
-          ]
+          ],
+          "note": "Un solo manubrio impugnato a due mani (kg = peso del manubrio)"
         },
         {
           "name": "Hip thrust bilanciere",
@@ -2806,7 +2809,8 @@
               "kg": 7.7,
               "reps": 15
             }
-          ]
+          ],
+          "note": "Un solo manubrio impugnato a due mani (kg = peso del manubrio)"
         },
         {
           "name": "Alzate laterali manubri",
@@ -3062,7 +3066,8 @@
               "kg": 8.7,
               "reps": 12
             }
-          ]
+          ],
+          "note": "Un solo manubrio impugnato a due mani (kg = peso del manubrio)"
         },
         {
           "name": "Hip thrust bilanciere",
@@ -3168,7 +3173,8 @@
               "kg": 8.7,
               "reps": 12
             }
-          ]
+          ],
+          "note": "Un solo manubrio impugnato a due mani (kg = peso del manubrio)"
         },
         {
           "name": "Curl inclinato manubri",
