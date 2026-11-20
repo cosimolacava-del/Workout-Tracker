@@ -3335,7 +3335,7 @@
       "date": "2026-11-20",
       "label": "Home C — progressione",
       "location": "Casa",
-      "status": "in_progress",
+      "status": "completed",
       "exercises": [
         {
           "name": "Panca piana manubri",
@@ -3443,7 +3443,8 @@
             }
           ]
         }
-      ]
+      ],
+      "note": "Hip thrust saltato per scelta; estensioni tricipiti sostituite da skull crusher (cambio di programma)."
     }
   ],
   "program": {
@@ -3509,6 +3510,10 @@
     ],
     "C": [
       [
+        "Hip thrust bilanciere",
+        "3×10–15"
+      ],
+      [
         "Panca piana manubri",
         "3×10–15"
       ],
@@ -3535,10 +3540,6 @@
       [
         "Skull crusher manubri",
         "2×10–15"
-      ],
-      [
-        "Hip thrust bilanciere",
-        "3×10–15"
       ]
     ]
   }
