@@ -42,7 +42,7 @@ Agisci come un **vero personal trainer**, non solo come registro:
 ## Altri registri
 
 - `data/bodyweight.json`: obiettivo **ricomposizione corporea** (chiarito da Cosimo il 20/11/2026): aumentare la massa magra **senza aumentare il peso complessivo**; peso stabile intorno a 68,5–69 kg (trend plurisettimanale, oscillazioni ±0,5 kg normali), calorie circa di mantenimento, proteine alte. Il progresso si valuta su forza, circonferenza vita e trend % grasso, non sulla bilancia; la % grasso BIA è solo una stima.
-- `data/nutrition.json`: target 2400 kcal, P 130 g, C 300 g, G 75 g. Registra solo pasti dichiarati, distingui stime da dati di etichetta, non riempire giorni mancanti.
+- `data/nutrition.json`: target dal 21/11/2026 **2300 kcal, P 140 g, C 275 g, G 70 g** (ricomposizione, mantenimento; prima 2400/130/300/75). Rivedere ogni 2–3 settimane sul trend del peso: stabilmente >69,3–69,5 kg → −100/150 kcal; <68,3 kg → +100/150 kcal. Registra solo pasti dichiarati, distingui stime da dati di etichetta, non riempire giorni mancanti.
 - `data/cardio.json`: sync MapMyRun predisposta ma **non verificata**; non chiedere né scrivere credenziali.
 
 ## Backup e sito
