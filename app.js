@@ -69,7 +69,7 @@ function drawExercise(name){
 const FORCE_LIFTS=[
  {id:'chest',label:'Petto · panca piana',variants:[['Panca piana manubri']]},
  {id:'back',label:'Schiena · rematore',variants:[['Rematore due manubri','Rematore 2 manubri','Rematore manubri'],['Rematore petto appoggiato panca inclinata']]},
- {id:'legs',label:'Gambe · stacco rumeno',variants:[['Romanian Deadlift manubri','Romanian deadlift manubri'],['Romanian deadlift bilanciere']]},
+ {id:'legs',label:'Gambe · stacco rumeno',variants:[['Romanian Deadlift manubri','Romanian deadlift manubri'],['Romanian deadlift bilanciere'],['Stacco rumeno una gamba manubri']]},
  {id:'shoulders',label:'Spalle · military press',variants:[['Military press in piedi','Military press manubri']]},
  {id:'biceps',label:'Bicipiti · curl',variants:[['Curl con manubri','Curl manubri','Curl in piedi'],['Curl inclinato manubri'],['Curl di concentrazione'],['Hammer curl','Curl martello']]},
  {id:'triceps',label:'Tricipiti · estensioni',variants:[['Skull crusher manubri','Skull crusher su panca'],['Estensioni tricipiti sopra la testa']]}
