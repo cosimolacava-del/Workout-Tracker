@@ -3453,7 +3453,17 @@
       "location": "Casa",
       "status": "in_progress",
       "note": "Settimana di scarico (anticipata di un giorno): una serie in meno per esercizio, 3–4 ripetizioni dal cedimento, stessi carichi.",
-      "exercises": []
+      "exercises": [
+        {
+          "name": "Panca piana manubri",
+          "sets": [
+            {
+              "kg": 26.7,
+              "reps": 8
+            }
+          ]
+        }
+      ]
     }
   ],
   "program": {
