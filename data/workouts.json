@@ -3521,6 +3521,15 @@
               "reps": 10
             }
           ]
+        },
+        {
+          "name": "Alzate laterali manubri",
+          "sets": [
+            {
+              "kg": 7.7,
+              "reps": 10
+            }
+          ]
         }
       ]
     }
