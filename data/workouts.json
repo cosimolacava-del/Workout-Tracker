@@ -3494,6 +3494,15 @@
               "perLeg": true
             }
           ]
+        },
+        {
+          "name": "Military press in piedi",
+          "sets": [
+            {
+              "kg": 14.7,
+              "reps": 8
+            }
+          ]
         }
       ]
     }
