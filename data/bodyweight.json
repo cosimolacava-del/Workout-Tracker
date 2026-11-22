@@ -75,6 +75,14 @@
       "body_fat_percent": 21.6,
       "measurement_timing": "pre_workout",
       "note": "Massa grassa stimata 21,6% · sera, prima allenamento"
+    },
+    {
+      "date": "2026-11-22",
+      "kg": 68.75,
+      "body_fat_percent": 21.6,
+      "measurement_timing": "evening",
+      "time_of_day": "evening",
+      "note": "Misura serale (21:50), giorno di riposo senza allenamento; confrontabile con le misure pre-allenamento serali."
     }
   ]
 }
