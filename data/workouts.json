@@ -3603,6 +3603,16 @@
               "reps": 10
             }
           ]
+        },
+        {
+          "name": "Alzate laterali manubri",
+          "sets": [
+            {
+              "kg": 7.7,
+              "reps": 12,
+              "note": "carico non specificato: assunto 7,7 (stessi manubri del curl)"
+            }
+          ]
         }
       ]
     }
