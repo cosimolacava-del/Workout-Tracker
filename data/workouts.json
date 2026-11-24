@@ -3543,9 +3543,9 @@
       "date": "2026-11-24",
       "label": "Home B — scarico",
       "location": "Casa",
-      "status": "in_progress",
+      "status": "completed",
       "deload": true,
-      "note": "Settimana di scarico: una serie in meno per esercizio, 3–4 ripetizioni dal cedimento, stessi carichi del 17/11.",
+      "note": "Scarico: una serie in meno, 3–4 ripetizioni dal cedimento, stessi carichi del 17/11. Squat sumo saltato (per non cambiare dischi). Alzate laterali a 7,7 (solo nello scarico).",
       "exercises": [
         {
           "name": "Romanian deadlift bilanciere",
@@ -3611,6 +3611,10 @@
               "kg": 7.7,
               "reps": 12,
               "note": "carico non specificato: assunto 7,7 (stessi manubri del curl)"
+            },
+            {
+              "kg": 7.7,
+              "reps": 12
             }
           ]
         }
