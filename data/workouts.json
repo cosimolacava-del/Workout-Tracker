@@ -3559,6 +3559,15 @@
               "reps": 9
             }
           ]
+        },
+        {
+          "name": "Panca inclinata manubri",
+          "sets": [
+            {
+              "kg": 22.7,
+              "reps": 9
+            }
+          ]
         }
       ]
     }
