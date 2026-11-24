@@ -3546,7 +3546,17 @@
       "status": "in_progress",
       "deload": true,
       "note": "Settimana di scarico: una serie in meno per esercizio, 3–4 ripetizioni dal cedimento, stessi carichi del 17/11.",
-      "exercises": []
+      "exercises": [
+        {
+          "name": "Romanian deadlift bilanciere",
+          "sets": [
+            {
+              "kg": 47,
+              "reps": 9
+            }
+          ]
+        }
+      ]
     }
   ],
   "program": {
