@@ -3594,6 +3594,15 @@
               "reps": 9
             }
           ]
+        },
+        {
+          "name": "Curl di concentrazione",
+          "sets": [
+            {
+              "kg": 7.7,
+              "reps": 10
+            }
+          ]
         }
       ]
     }
