@@ -3585,6 +3585,15 @@
               "reps": 8
             }
           ]
+        },
+        {
+          "name": "Pullover manubrio",
+          "sets": [
+            {
+              "kg": 16.7,
+              "reps": 9
+            }
+          ]
         }
       ]
     }
